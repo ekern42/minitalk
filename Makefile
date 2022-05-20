@@ -6,7 +6,7 @@
 #    By: ekern <ekern@student.42lausanne.ch>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 11:19:49 by ekern             #+#    #+#              #
-#    Updated: 2022/05/17 13:19:27 by ekern            ###   ########.fr        #
+#    Updated: 2022/05/20 15:53:16 by ekern            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ OBJS = ${SRCS:c=o}
 all : $(LIBFT) $(SERVER) $(CLIENT)
 
 $(SERVER) : $(OBJS)
-	$(CC) $(CFLAGS) srcs/server.c $(LIBFT_FILE) -o $@
+	$(CC) $(CFLAGS) $(LIBFT_FILE) srcs/server.c -o $@
 
 $(CLIENT) : $(OBJS)
-	$(CC) $(CFLAGS) srcs/client.c $(LIBFT_FILE) -o $@
+	$(CC) $(CFLAGS) $(LIBFT_FILE) srcs/client.c -o $@
 
 srcs/%.o : %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c $<
@@ -48,7 +48,7 @@ fclean : clean
 
 big_clean : fclean $(LIBFT_FILE)_fclean
 
-re : fclean all
+re : big_clean all
 
 # Libft
 

@@ -6,7 +6,7 @@
 /*   By: ekern <ekern@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:21:27 by ekern             #+#    #+#             */
-/*   Updated: 2022/05/17 11:42:23 by ekern            ###   ########.fr       */
+/*   Updated: 2022/05/20 15:49:02 by ekern            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,5 @@
 # include <signal.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-/* SRCS */
-
-
 
 #endif
