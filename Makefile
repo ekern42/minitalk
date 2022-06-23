@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ekern <ekern@student.42lausanne.ch>        +#+  +:+       +#+         #
+#    By: ekern <ekern@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 11:19:49 by ekern             #+#    #+#              #
-#    Updated: 2022/05/20 15:53:16 by ekern            ###   ########.fr        #
+#    Updated: 2022/06/23 10:37:30 by ekern            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ OBJS = ${SRCS:c=o}
 all : $(LIBFT) $(SERVER) $(CLIENT)
 
 $(SERVER) : $(OBJS)
-	$(CC) $(CFLAGS) $(LIBFT_FILE) srcs/server.c -o $@
+	$(CC) $(CFLAGS) srcs/server.c $(LIBFT_FILE) -o $@
 
 $(CLIENT) : $(OBJS)
-	$(CC) $(CFLAGS) $(LIBFT_FILE) srcs/client.c -o $@
+	$(CC) $(CFLAGS) srcs/client.c $(LIBFT_FILE) -o $@
 
 srcs/%.o : %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c $<
